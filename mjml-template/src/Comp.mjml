@@ -6,9 +6,6 @@
       <mj-all font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" />
       <mj-body background-color="#f6f6f6" />
       <mj-divider border-width="1px" border-color="lightgrey" />
-      <mj-class name="infoBg" container-background-color="#1890ff" />
-      <mj-class name="successBg" container-background-color="#52c41a" />
-      <mj-class name="dangerBg" container-background-color="#f5222d" />
       <mj-class name="info" background-color="#1890ff" />
       <mj-class name="success" background-color="#52c41a" />
       <mj-class name="danger" background-color="#f5222d" />
@@ -17,18 +14,44 @@
   <mj-body>
 
     <!--/*/ <section data-th-fragment="divider"> /*/-->
-    <mj-section>
+    <mj-section padding="0">
       <mj-column>
         <mj-divider />
       </mj-column>
     </mj-section>
     <!--/*/ </section> /*/-->
 
-    <!--/*/ <section data-th-fragment="button(text, href, bgColor)"> /*/-->
-    <mj-section>
+    <!--/*/ <section data-th-fragment="infoButton(text, href)"> /*/-->
+    <mj-section padding="0">
       <mj-column>
-        <mj-button href="[[${href}]]" background-color="red">
-          [[${text}]]
+        <mj-button mj-class="info">
+          <a data-th-href="@{${href}}" href="#" target="_blank" style="color:#fff;text-decoration: none;">
+            [[${text}]]
+          </a>
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <!--/*/ </section> /*/-->
+
+    <!--/*/ <section data-th-fragment="successButton(text, href)"> /*/-->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-button mj-class="success">
+          <a data-th-href="@{${href}}" href="#" target="_blank" style="color:#fff;text-decoration: none;">
+            [[${text}]]
+          </a>
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <!--/*/ </section> /*/-->
+
+    <!--/*/ <section data-th-fragment="dangerButton(text, href)"> /*/-->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-button mj-class="danger">
+          <a data-th-href="@{${href}}" href="#" target="_blank" style="color:#fff;text-decoration: none;">
+            [[${text}]]
+          </a>
         </mj-button>
       </mj-column>
     </mj-section>

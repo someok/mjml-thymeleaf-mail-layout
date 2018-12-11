@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html data-layout-decorate="~{mail/Layout}" lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Mail Demo</title>
+</head>
+<body>
+
+<!-- 用于在收件箱列表中展示的预览信息，尽量控制在 25 个字以上 -->
+<div data-layout-fragment="preview">
+    这是个 preview 信息111，这是个 preview 信息。
+</div>
+
+<!-- 实际的内容区域 -->
+<section data-layout-fragment="content">
+    <h2>这是个测试邮件</h2>
+    <p data-th-utext="${message}"></p>
+    <div data-th-replace="mail/Comp :: divider"></div>
+
+    <h3>按钮使用示例</h3>
+    <div
+        data-th-replace="mail/Comp :: infoButton('测试 info', 'https://github.com/someok/mjml-thymeleaf-mail-layout')"></div>
+    <div
+        data-th-replace="mail/Comp :: successButton('测试 success', 'https://github.com/someok/mjml-thymeleaf-mail-layout')"></div>
+    <div
+        data-th-replace="mail/Comp :: dangerButton('测试 danger', 'https://github.com/someok/mjml-thymeleaf-mail-layout')"></div>
+
+    <h3>提示信息使用示例</h3>
+    <p>此信息一般放在开头，算是高亮提醒</p>
+    <div data-th-replace="mail/Comp :: divider"></div>
+</section>
+
+</body>
+</html>

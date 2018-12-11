@@ -1,0 +1,13 @@
+app:
+    mail:
+        enabled: true
+        defaultFrom: BMS <noreply@example.com>
+
+spring:
+    mail:
+        host: 127.0.0.1
+        # GreenMail smtp 的 25 端口实际是 3025
+        port: 3025
+        properties:
+            mail:
+                debug: true

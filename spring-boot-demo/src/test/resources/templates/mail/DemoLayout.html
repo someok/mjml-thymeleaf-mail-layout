@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo Layout</title>
+</head>
+<body>
+<header>
+    <h1>Demo Layout Page: [[${toUserName}]]</h1>
+
+    <p data-layout-fragment="header">
+        header content
+    </p>
+</header>
+
+<!--/*/ <section data-layout-fragment="content"> /*/-->
+    <p>
+        Page Content Here.
+    </p>
+<!--/*/ </section> /*/-->
+
+<footer>
+    <p>My footer</p>
+    <p data-layout-fragment="custom-footer">Custom footer here</p>
+</footer>
+
+</body>
+</html>

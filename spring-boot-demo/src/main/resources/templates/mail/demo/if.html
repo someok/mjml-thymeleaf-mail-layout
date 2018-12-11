@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>if demo</title>
+</head>
+<hr>
+111
+<div data-th-if="${infoMessage} != null">
+    <div data-th-text="${infoMessage}">
+        infoMessage
+    </div>
+    <div>
+        null is show111: [[${infoMessage == null}]]
+    </div>
+</div>
+
+<hr>
+
+<hr>
+<!--/*/ <th:block th:if="${infoMessage} != null"> /*/-->
+<div data-th-text="${infoMessage}">
+    infoMessage
+</div>
+<div>
+    null is show: [[${infoMessage == null}]]
+</div>
+<!--/*/ </th:block> /*/-->
+<hr>
+
+<!--/*/ <th:block th:if="${successMessage} != null"> /*/-->
+<div data-th-text="${successMessage}">
+    successMessage
+</div>
+<!--/*/ </th:block> /*/-->
+
+<hr>
+<div data-th-if="${successMessage} != null" data-th-text="${successMessage}">
+    successMessage
+</div>
+</body>
+</html>

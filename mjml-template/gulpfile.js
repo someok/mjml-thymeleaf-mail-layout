@@ -5,15 +5,25 @@ const replace = require('gulp-replace');
 
 /**
  * 将 mjml 文件编译成 html 模板
- *
- * 编译中需要将 &lt;!-- \/*\/ 中的空格去掉
  */
 function compileMjml() {
     return src('src/*.mjml')
         .pipe(mjml())
-        .pipe(replace(' /*/ ', '/*/'))
-        .pipe(cleanDest('dist', {extension: '.html'}))
+        .pipe(replace(' /*/ ', '/*/')) // 去掉前后空格
+        .pipe(
+            cleanDest('dist', {
+                extension: '.html',
+            })
+        )
         .pipe(dest('dist'));
 }
 
-exports.default = series(compileMjml);
+/**
+ * 将生成的 html 拷贝到 spring boot 的 templates 下
+ */
+function copy2SpringBoot() {
+    return src('dist/*.html').pipe(dest('../spring-boot-demo/src/main/resources/templates/mail'));
+}
+
+exports.compile = compileMjml;
+exports.default = series(compileMjml, copy2SpringBoot);

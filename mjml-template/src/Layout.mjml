@@ -11,9 +11,6 @@
       <mj-all font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" />
       <mj-body background-color="#f6f6f6" />
       <mj-divider border-width="1px" border-color="lightgrey" />
-      <mj-class name="infoBg" container-background-color="#1890ff" />
-      <mj-class name="successBg" container-background-color="#52c41a" />
-      <mj-class name="dangerBg" container-background-color="#f5222d" />
       <mj-class name="info" background-color="#1890ff" />
       <mj-class name="success" background-color="#52c41a" />
       <mj-class name="danger" background-color="#f5222d" />
@@ -31,15 +28,36 @@
       <!-- logo end -->
 
       <!-- message begin -->
-      <mj-section padding="0">
+
+      <!--/*/ <section data-th-if="${infoMessage} != null"> /*/-->
+      <mj-section padding="0" mj-class="info">
         <mj-column>
-          <mj-text align="center">
-            <!--/*/ <section data-layout-fragment="message"> /*/-->
-            highlight message here
-            <!--/*/ </section> /*/-->
+          <mj-text align="center" color="#fff">
+            [(${infoMessage})]
           </mj-text>
         </mj-column>
       </mj-section>
+      <!--/*/ </section> /*/-->
+
+      <!--/*/ <section data-th-if="${successMessage} != null"> /*/-->
+      <mj-section padding="0" mj-class="success">
+        <mj-column>
+          <mj-text align="center" color="#fff">
+            [(${successMessage})]
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!--/*/ </section> /*/-->
+
+      <!--/*/ <section data-th-if="${dangerMessage} != null"> /*/-->
+      <mj-section padding="0" mj-class="danger">
+        <mj-column>
+          <mj-text align="center" color="#fff">
+            [(${dangerMessage})]
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!--/*/ </section> /*/-->
 
       <!-- message end -->
 
