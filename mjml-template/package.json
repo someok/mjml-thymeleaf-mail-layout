@@ -1,6 +1,7 @@
 {
-  "name": "mjml-thymeleaf-mail-layout",
+  "name": "mjml-template",
   "version": "1.0.0",
+  "private": true,
   "scripts": {
     "clean": "rimraf dist",
     "lint": "eslint src/",
@@ -29,6 +30,8 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-prettier": "^3.0.0",
+    "gulp": "^4.0.0",
+    "gulp-mjml": "^3.0.0",
     "prettier": "^1.15.3",
     "prettier-eslint-cli": "^4.7.1",
     "rimraf": "^2.6.2"
