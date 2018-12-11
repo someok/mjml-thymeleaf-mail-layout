@@ -1,0 +1,111 @@
+<mjml>
+  <mj-head>
+    <mj-title>MJML Mail Layout</mj-title>
+    <mj-preview>Hello MJML</mj-preview>
+
+    <mj-attributes>
+      <mj-all font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" />
+      <mj-body background-color="#f6f6f6" />
+      <mj-divider border-width="1px" border-color="lightgrey" />
+      <mj-class name="infoBg" container-background-color="#1890ff" />
+      <mj-class name="successBg" container-background-color="#52c41a" />
+      <mj-class name="dangerBg" container-background-color="#f5222d" />
+      <mj-class name="info" background-color="#1890ff" />
+      <mj-class name="success" background-color="#52c41a" />
+      <mj-class name="danger" background-color="#f5222d" />
+    </mj-attributes>
+  </mj-head>
+
+  <mj-body>
+    <mj-wrapper background-color="#fff">
+      <!-- logo begin -->
+      <mj-section padding="0">
+        <mj-column>
+          <mj-image src="https://bms.thinglync.com/static/assets/mail/city-01.png" alt="City" />
+        </mj-column>
+      </mj-section>
+      <!-- logo end -->
+
+      <!-- message begin -->
+      <!--/*/ <th:block th:if="${infoMessage} != null"> /*/-->
+      <mj-section padding="0">
+        <mj-column>
+          <mj-text align="center">
+            <div data-th-replace="mail/component :: infoMessage(${infoMessage})">
+              infoMessage
+            </div>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!--/*/ </th:block> /*/-->
+      <!--/*/ <th:block th:if="${successMessage} != null"> /*/-->
+      <mj-section padding="0">
+        <mj-column>
+          <mj-text align="center">
+            <div data-th-replace="mail/component :: successMessage(${successMessage})">
+              successMessage
+            </div>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!--/*/ </th:block> /*/-->
+      <!--/*/ <th:block th:if="${dangerMessage} != null"> /*/-->
+      <mj-section padding="0">
+        <mj-column>
+          <mj-text align="center">
+            <div data-th-replace="mail/component :: dangerMessage(${dangerMessage})">
+              dangerMessage
+            </div>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!--/*/ </th:block> /*/-->
+
+      <!-- message end -->
+
+      <!-- content begin -->
+      <mj-section padding="0">
+        <mj-column>
+
+          <mj-text>
+            <span data-th-text="${toUserName} == null ? '你好：' : ${toUserName} + '，你好：'">你好：</span>
+          </mj-text>
+          <mj-text>
+            <div data-th-replace="${content}">
+              mail content here
+            </div>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+      <!-- content end -->
+    </mj-wrapper>
+
+    <!-- footer begin -->
+    <mj-section>
+      <mj-column>
+        <mj-text align="left" font-weight="bold">
+          本邮件为系统自动发送，请勿回复！
+        </mj-text>
+      </mj-column>
+      <mj-column>
+        <mj-text align="right" font-weight="bold">
+          <a href="https://github.com/someok/mjml-thymeleaf-mail-layout" target="_blank">
+            Layout Demo
+          </a>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-divider />
+
+    <mj-section>
+      <mj-column>
+        <mj-text align="center">
+          Copyright © 2016 - 2018 Demo. All Rights Reserved.
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    <!-- footer end -->
+
+  </mj-body>
+</mjml>
