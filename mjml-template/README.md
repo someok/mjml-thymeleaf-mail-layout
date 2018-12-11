@@ -61,7 +61,7 @@
 </section>
 ```
 
-具体可参见：`spring-boot-demo/src/main/resources/templates/mail/demo/demo.html`。
+具体可参见：[spring-boot-demo/src/main/resources/templates/mail/demo/demo.html](../spring-boot-demo/src/main/resources/templates/mail/demo/demo.html)。
 
 ## gulp 命令
 
