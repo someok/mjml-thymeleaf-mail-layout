@@ -1,6 +1,7 @@
 package com.example.mail.service;
 
 import com.example.mail.AbstractTest;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.TestPropertySource;
@@ -18,7 +19,7 @@ import java.util.Map;
  * @author wjx
  * @version 1.0.0
  */
-//@Ignore
+@Ignore
 @TestPropertySource("classpath:mail.properties")
 public class RealSmtpTest extends AbstractTest {
 
