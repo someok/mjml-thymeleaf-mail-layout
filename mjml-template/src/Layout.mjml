@@ -1,7 +1,11 @@
 <mjml>
   <mj-head>
-    <mj-title>MJML Mail Layout</mj-title>
-    <mj-preview>Hello MJML</mj-preview>
+    <mj-title>Mail Layout</mj-title>
+    <mj-preview>
+      <div data-layout-fragment="preview">
+        <!-- preview message here -->
+      </div>
+    </mj-preview>
 
     <mj-attributes>
       <mj-all font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" />
@@ -27,57 +31,30 @@
       <!-- logo end -->
 
       <!-- message begin -->
-      <!--/*/ <th:block th:if="${infoMessage} != null"> /*/-->
       <mj-section padding="0">
         <mj-column>
           <mj-text align="center">
-            <div data-th-replace="mail/component :: infoMessage(${infoMessage})">
-              infoMessage
-            </div>
+            <!--/*/ <section data-layout-fragment="message"> /*/-->
+            highlight message here
+            <!--/*/ </section> /*/-->
           </mj-text>
         </mj-column>
       </mj-section>
-      <!--/*/ </th:block> /*/-->
-      <!--/*/ <th:block th:if="${successMessage} != null"> /*/-->
-      <mj-section padding="0">
-        <mj-column>
-          <mj-text align="center">
-            <div data-th-replace="mail/component :: successMessage(${successMessage})">
-              successMessage
-            </div>
-          </mj-text>
-        </mj-column>
-      </mj-section>
-      <!--/*/ </th:block> /*/-->
-      <!--/*/ <th:block th:if="${dangerMessage} != null"> /*/-->
-      <mj-section padding="0">
-        <mj-column>
-          <mj-text align="center">
-            <div data-th-replace="mail/component :: dangerMessage(${dangerMessage})">
-              dangerMessage
-            </div>
-          </mj-text>
-        </mj-column>
-      </mj-section>
-      <!--/*/ </th:block> /*/-->
 
       <!-- message end -->
 
       <!-- content begin -->
       <mj-section padding="0">
         <mj-column>
-
           <mj-text>
-            <span data-th-text="${toUserName} == null ? '你好：' : ${toUserName} + '，你好：'">你好：</span>
-          </mj-text>
-          <mj-text>
-            <div data-th-replace="${content}">
-              mail content here
-            </div>
+            <!--/*/ <section data-layout-fragment="content"> /*/-->
+            mail content here
+            <!--/*/ </section> /*/-->
           </mj-text>
         </mj-column>
       </mj-section>
       <!-- content end -->
+
     </mj-wrapper>
 
     <!-- footer begin -->

@@ -1,0 +1,38 @@
+<mjml>
+  <mj-head>
+    <mj-title>Mail Page Components</mj-title>
+
+    <mj-attributes>
+      <mj-all font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'" />
+      <mj-body background-color="#f6f6f6" />
+      <mj-divider border-width="1px" border-color="lightgrey" />
+      <mj-class name="infoBg" container-background-color="#1890ff" />
+      <mj-class name="successBg" container-background-color="#52c41a" />
+      <mj-class name="dangerBg" container-background-color="#f5222d" />
+      <mj-class name="info" background-color="#1890ff" />
+      <mj-class name="success" background-color="#52c41a" />
+      <mj-class name="danger" background-color="#f5222d" />
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+
+    <!--/*/ <th:block th:fragment="divider"> /*/-->
+    <mj-section>
+      <mj-column>
+        <mj-divider />
+      </mj-column>
+    </mj-section>
+    <!--/*/ </th:block> /*/-->
+
+    <!--/*/ <th:block th:fragment="button(text, href, bgColor)"> /*/-->
+    <mj-section>
+      <mj-column>
+        <mj-button href="[[${href}]]" background-color="red">
+          [[${text}]]
+        </mj-button>
+      </mj-column>
+    </mj-section>
+    <!--/*/ </th:block> /*/-->
+
+  </mj-body>
+</mjml>

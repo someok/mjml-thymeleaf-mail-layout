@@ -16,7 +16,7 @@ trim_trailing_whitespace = false
 [*.bat]
 end_of_line = crlf
 
-[*.json]
+[{*.json,*.html}]
 indent_size = 2
 
 [*.yml]
