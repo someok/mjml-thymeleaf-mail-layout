@@ -21,7 +21,7 @@
       <!-- logo begin -->
       <mj-section padding="0">
         <mj-column>
-          <mj-image src="https://bms.thinglync.com/static/assets/mail/city-01.png" alt="City" />
+          <mj-image src="https://github.com/someok/mjml-thymeleaf-mail-layout/raw/master/mjml-template/src/assets/city-01.png" alt="City" />
         </mj-column>
       </mj-section>
       <!-- logo end -->
