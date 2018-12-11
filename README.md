@@ -18,3 +18,8 @@
 > .gradlew test
 
 测试完成后会生成若干 HTML 文件，位置是： `${user.homt}/temp/mail_html/`，方便直接在浏览器中查看。
+
+
+## Demo
+
+![样例展示](snapshot/mail-demo.png "样例图片")
