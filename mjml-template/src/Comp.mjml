@@ -13,10 +13,20 @@
   </mj-head>
   <mj-body>
 
+    <!--/* 分隔横线 */-->
     <!--/*/ <section data-th-fragment="divider"> /*/-->
     <mj-section padding="0">
       <mj-column>
         <mj-divider />
+      </mj-column>
+    </mj-section>
+    <!--/*/ </section> /*/-->
+
+    <!--/* 50px 的空白分隔行 */-->
+    <!--/*/ <section data-th-fragment="spacer"> /*/-->
+    <mj-section padding="0">
+      <mj-column>
+        <mj-spacer height="50px" />
       </mj-column>
     </mj-section>
     <!--/*/ </section> /*/-->

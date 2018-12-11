@@ -1,6 +1,7 @@
 {
   "name": "mjml-template",
   "version": "1.0.0",
+  "description": "通过 mjml 生成 thymeleaf 模板",
   "private": true,
   "scripts": {
     "clean": "rimraf dist",
@@ -34,6 +35,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-clean-dest": "^0.2.0",
+    "gulp-header": "^2.0.5",
     "gulp-mjml": "^3.0.0",
     "gulp-replace": "^1.0.0",
     "prettier": "^1.15.3",
