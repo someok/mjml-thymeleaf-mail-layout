@@ -16,15 +16,15 @@
   </mj-head>
   <mj-body>
 
-    <!--/*/ <th:block th:fragment="divider"> /*/-->
+    <!--/*/ <section data-th-fragment="divider"> /*/-->
     <mj-section>
       <mj-column>
         <mj-divider />
       </mj-column>
     </mj-section>
-    <!--/*/ </th:block> /*/-->
+    <!--/*/ </section> /*/-->
 
-    <!--/*/ <th:block th:fragment="button(text, href, bgColor)"> /*/-->
+    <!--/*/ <section data-th-fragment="button(text, href, bgColor)"> /*/-->
     <mj-section>
       <mj-column>
         <mj-button href="[[${href}]]" background-color="red">
@@ -32,7 +32,7 @@
         </mj-button>
       </mj-column>
     </mj-section>
-    <!--/*/ </th:block> /*/-->
+    <!--/*/ </section> /*/-->
 
   </mj-body>
 </mjml>
