@@ -1,0 +1,25 @@
+{
+  "name": "mjml-thymeleaf-mail-layout",
+  "version": "1.0.0",
+  "description": "使用 MJML 标记语言配合 Thymeleaf 生成邮件模板",
+  "private": true,
+  "license": "MIT",
+  "author": {
+    "name": "JX Wang",
+    "email": "wjianxu@gmail.com",
+    "url": "http://www.someok.com"
+  },
+  "keywords": [
+    "MJML",
+    "thymeleaf",
+    "mail",
+    "template"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/someok/mjml-thymeleaf-mail-layout"
+  },
+  "bugs": {
+    "url": "https://github.com/someok/mjml-thymeleaf-mail-layout/issues"
+  }
+}
