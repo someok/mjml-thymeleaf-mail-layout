@@ -1,8 +1,11 @@
 buildscript {
 	ext {
-		springBootVersion = '2.1.1.RELEASE'
+		springBootVersion = '2.1.7.RELEASE'
 	}
 	repositories {
+		maven {
+            url "http://maven.aliyun.com/nexus/content/groups/public/"
+        }
 		mavenCentral()
 	}
 	dependencies {
@@ -19,18 +22,21 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
+	maven {
+		url "http://maven.aliyun.com/nexus/content/groups/public/"
+	}
 	mavenCentral()
 }
 
 
 dependencies {
-	implementation('org.springframework.boot:spring-boot-starter-web')
-	implementation('org.springframework.boot:spring-boot-starter-mail')
-	implementation('org.springframework.boot:spring-boot-starter-thymeleaf')
-	implementation('nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.3.0')
-	implementation('com.icegreen:greenmail:1.5.9')
-	implementation('org.apache.commons:commons-lang3:3.7')
-	
-	testImplementation('org.springframework.boot:spring-boot-starter-test')
-	testImplementation('org.assertj:assertj-core:3.10.0')
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-mail'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:2.4.1'
+	implementation 'com.icegreen:greenmail:1.5.10'
+	implementation 'org.apache.commons:commons-lang3:3.9'
+
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.assertj:assertj-core:3.13.2'
 }
